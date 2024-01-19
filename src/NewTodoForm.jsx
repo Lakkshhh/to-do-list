@@ -4,7 +4,9 @@ import PropTypes from "prop-types";
 
 export function NewTodoForm({ todos, onSubmit }) {
   const [newItem, setNewItem] = useState("");
-  const isDuplicate = newItem !== "" && todos.includes(newItem);
+  const lowerCaseTodos = todos.map(todo => todo.toLowerCase());
+  const lowerCaseNewItem = newItem.toLowerCase();
+  const isDuplicate = newItem !== "" && lowerCaseTodos.includes(lowerCaseNewItem);
 
   function handleSubmit(e) {
     e.preventDefault();
