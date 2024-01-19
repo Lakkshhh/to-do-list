@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-// eslint-disable-next-line no-unused-vars
+import Icon from "./Icon"
+
 export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
     return(
         <li>
@@ -16,7 +16,7 @@ export function TodoItem({ completed, id, title, toggleTodo, deleteTodo }) {
                 onClick={() => deleteTodo(id)}
                 className="btn btn-danger"
             >
-            <img src = "src/dustbin.png" alt="Dustbin" width="30" height="30" />
+                <Icon />
             </button>
         </li>
     )
