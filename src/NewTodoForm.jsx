@@ -11,7 +11,7 @@ export function NewTodoForm({ todos, onSubmit }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (isDuplicate) {
+    if (isDuplicate || newItem.trim() === "") {
       // If the newItem is already present in the todo list, it will do nothing
       return;
     }
